@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/digiParent"
+        android:layout_width="match_parent"
+        android:background="@color/teal_200"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+        <LinearLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/g1"
+            android:layout_width="match_parent"
+            android:background="#80000000"
+            android:weightSum="3"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_height="0dp">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:fontFamily="@font/itc"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:layout_marginLeft="15dp"
+                android:text="ID No."
+                android:textSize="25sp"/>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/itc"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:text="API KEY"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/itc"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:text="COMMAND"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/g1"
+            app:layout_constraintBottom_toTopOf="@id/g2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="0dp"
+            tools:listitem="@layout/layout_http" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSend"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/clear"
+            android:background="@drawable/buttonlayout"
+            app:layout_constraintTop_toBottomOf="@id/recyclerview"
+            app:layout_constraintEnd_toEndOf="@id/recyclerview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

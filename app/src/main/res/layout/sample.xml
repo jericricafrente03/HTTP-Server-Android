@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:weightSum="8"
+        android:padding="2dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:padding="2dp"
+            android:id="@+id/tv_start"
+            tools:background="#07E8D5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:autoSizeMaxTextSize="20sp"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            android:fontFamily="@font/itc"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:padding="2dp"
+            android:id="@+id/rv_start"
+            android:background="#D81616"
+            app:autoSizeMaxTextSize="35sp"
+            app:autoSizeMinTextSize="15sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="3"
+            android:fontFamily="@font/itc"
+            android:textColor="@color/white"
+            android:text="8:30 AM" />
+
+        <TextView
+            android:id="@+id/tv_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#30A31C"
+            android:fontFamily="@font/itc"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_endtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:fontFamily="@font/itc"
+            android:background="#0B16D3"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/tv_end"
+            app:layout_constraintStart_toStartOf="@id/tv_end"
+            app:layout_constraintTop_toBottomOf="@id/tv_end"
+            android:text="11:30 AM" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
